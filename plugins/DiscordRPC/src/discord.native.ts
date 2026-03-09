@@ -6,7 +6,7 @@ export const getClient = async () => {
 	if (isAvailable) return rpcClient!;
 
 	if (rpcClient) await rpcClient.destroy();
-	rpcClient = new Client({ clientId: "1130698654987067493" });
+	rpcClient = new Client({ clientId: "1480531294290186280" });
 	await rpcClient.connect();
 
 	return rpcClient;

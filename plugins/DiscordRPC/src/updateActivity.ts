@@ -92,7 +92,7 @@ const _updateActivity = async (mediaItem?: MediaItem) => {
 
 	// Status text
 	const statusText = fmtStr(await getStatusText(mediaItem));
-	activity.name = 'Listening to TIDAL';
+	activity.name = 'TIDAL';
 
 	// Title
 	const trackTitle = fmtStr(await mediaItem.title());
@@ -105,7 +105,7 @@ const _updateActivity = async (mediaItem?: MediaItem) => {
 	activity.stateUrl = artistUrl;
 
 	activity.details = trackTitle;
-	activity.statusDisplayType = StatusDisplayType.Name;
+	activity.statusDisplayType = StatusDisplayType.Details;
 
 	// Pause indicator
 	if (PlayState.playing) {
