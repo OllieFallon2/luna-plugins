@@ -2,21 +2,22 @@
 	"name": "@inrixia/luna-plugins",
 	"description": "Plugins for Tidal Luna",
 	"author": {
-		"name": "Inrixia",
-		"url": "https://github.com/Inrixia",
+		"name": "OllieFallon2",
+		"url": "https://github.com/OllieFallon2",
 		"avatarUrl": "https://2.gravatar.com/avatar/eeaffef9eb9b436dccc58c6c44c9fe8c3528e83e3bf64e1c736a68dbe8c097d3"
 	},
-	"homepage": "https://github.com/Inrixia/luna-plugins",
+	"homepage": "https://github.com/OllieFallon2/luna-plugins",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Inrixia/luna-plugins.git"
+		"url": "https://github.com/OllieFallon2/luna-plugins.git"
 	},
 	"type": "module",
 	"scripts": {
 		"watch": "concurrently npm:esWatch npm:serve",
-		"build": "rimraf ./dist && tsx esbuild.config.ts",
+		"build": "rimraf ./dist && tsx esbuild.config.ts && cp store.package.json dist/package.json",
 		"esWatch": "rimraf ./dist && tsx ./esbuild.config.ts --watch",
-		"serve": "http-server ./dist -p 3000 -s --cors -c-1"
+		"serve": "http-server ./dist -p 3000 -s --cors -c-1",
+		"deploy": "gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@inrixia/helpers": "^3.21.2",
@@ -25,6 +26,7 @@
 		"@types/react-dom": "^19.2.3",
 		"concurrently": "^9.2.1",
 		"electron": "^40.0.0",
+		"gh-pages": "^6.3.0",
 		"http-server": "^14.1.1",
 		"luna": "github:Inrixia/TidaLuna",
 		"oby": "^15.1.2",
