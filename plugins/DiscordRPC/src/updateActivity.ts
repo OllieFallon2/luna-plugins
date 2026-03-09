@@ -92,7 +92,7 @@ const _updateActivity = async (mediaItem?: MediaItem) => {
 
 	// Status text
 	const statusText = fmtStr(await getStatusText(mediaItem));
-	activity.name = statusText;
+	activity.name = 'Listening to TIDAL';
 
 	// Title
 	const trackTitle = fmtStr(await mediaItem.title());
