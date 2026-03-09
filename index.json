@@ -1,0 +1,13 @@
+{
+  "name": "ollie-plugins",
+  "description": "Plugins for TidaLuna (mine)",
+  "author": {
+    "name": "OllieFallon2",
+    "url": "https://github.com/OllieFallon2"
+  },
+  "homepage": "https://github.com/OllieFallon2/luna-plugins",
+  "type": "module",
+  "plugins": [
+    "DiscordRPC.mjs"
+  ]
+}
