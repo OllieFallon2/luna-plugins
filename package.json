@@ -8,6 +8,6 @@
   "homepage": "https://github.com/OllieFallon2/luna-plugins",
   "type": "module",
   "plugins": [
-    "DiscordRPC"
+    "DiscordRPC.mjs"
   ]
 }
